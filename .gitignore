@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+
+# Database & Environment
+*.sqlite
+*.sqlite-journal
+.env
+.env.local
+
+# Logs & OS
+npm-debug.log*
+yarn-debug.log*
+.DS_Store
+Thumbs.db
