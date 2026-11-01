@@ -79,7 +79,7 @@ Aplikacja zostanie przygotowana do opcjonalnego uruchomienia w kontenerach Docke
 - [x] Opracowanie karty założeń projektu.
 
 ### Etap 2: Backend, Baza Danych i Logika
-- [ ] Konfiguracja TypeScript, ESLint i Express.js.
+- [x] Konfiguracja TypeScript, ESLint i Express.js.
 - [ ] Utworzenie struktury bazy SQLite i migracji tabel.
 - [ ] Implementacja wzorca Repozytorium dla encji `Event` i `User`.
 - [ ] Utworzenie endpointów CRUD dla wydarzeń.

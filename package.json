@@ -1,0 +1,14 @@
+{
+  "name": "eventhub",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev --workspace=@eventhub/server",
+    "dev:client": "npm run dev --workspace=@eventhub/client",
+    "build:server": "npm run build --workspace=@eventhub/server"
+  }
+}
