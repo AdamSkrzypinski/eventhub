@@ -10,6 +10,9 @@ build/
 # Database & Environment
 *.sqlite
 *.sqlite-journal
+*.sqlite-*
+*.db
+*.db-*
 .env
 .env.local
 
