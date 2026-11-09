@@ -82,7 +82,7 @@ Aplikacja zostanie przygotowana do opcjonalnego uruchomienia w kontenerach Docke
 - [x] Konfiguracja TypeScript, ESLint i Express.js.
 - [x] Utworzenie struktury bazy SQLite i migracji tabel.
 - [x] Implementacja wzorca Repozytorium dla encji `Event` i `User`.
-- [ ] Utworzenie endpointów CRUD dla wydarzeń.
+- [x] Utworzenie endpointów CRUD dla wydarzeń.
 - [ ] Implementacja autoryzacji JWT i middleware sprawdzających role.
 - [ ] Implementacja logiki zapisu na wydarzenie z blokadą overbookingu w transakcji SQLite.
 
