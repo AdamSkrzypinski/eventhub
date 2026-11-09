@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import { DatabaseConnection } from './config/database.js';
 import eventRoutes from './routes/event.routes.js';
 import authRoutes from './routes/auth.routes.js';
+import reservationRoutes from './routes/reservation.routes.js';
 
 
 dotenv.config();
@@ -16,6 +17,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
+app.use('/api/reservations', reservationRoutes);
 
 app.get('/api/health', (_req: Request, res: Response) => {
   res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });

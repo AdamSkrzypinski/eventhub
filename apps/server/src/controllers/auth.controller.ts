@@ -6,21 +6,25 @@ import { UserRepository } from '../repositories/UserRepository.js';
 
 const userRepo = new UserRepository();
 
-const authSchema = z.object({
+const registerSchema = z.object({
   email: z.email('Niepoprawny format adresu e-mail'),
   password: z.string().min(6, 'Hasło musi zawierać co najmniej 6 znaków'),
-  role: z.enum(['USER', 'ADMIN']).optional(),
+});
+
+const loginSchema = z.object({
+  email: z.email('Niepoprawny format adresu e-mail'),
+  password: z.string().min(1, 'Hasło jest wymagane'),
 });
 
 export class AuthController {
   public static register(req: Request, res: Response): void {
-    const parseResult = authSchema.safeParse(req.body);
+    const parseResult = registerSchema.safeParse(req.body);
     if (!parseResult.success) {
       res.status(400).json({ error: 'Błąd walidacji', details: parseResult.error.format() });
       return;
     }
 
-    const { email, password, role } = parseResult.data;
+    const { email, password } = parseResult.data;
 
     const existingUser = userRepo.findByEmail(email);
     if (existingUser) {
@@ -34,7 +38,7 @@ export class AuthController {
     const newUser = userRepo.create({
       email,
       password_hash,
-      role: role || 'USER',
+      role: 'USER',
     });
 
     res.status(201).json({
@@ -44,7 +48,7 @@ export class AuthController {
   }
 
   public static login(req: Request, res: Response): void {
-    const parseResult = authSchema.omit({ role: true }).safeParse(req.body);
+    const parseResult = loginSchema.safeParse(req.body);
     if (!parseResult.success) {
       res.status(400).json({ error: 'Błąd walidacji', details: parseResult.error.format() });
       return;

@@ -8,6 +8,7 @@
     "lint": "eslint src --ext .ts"
   },
   "dependencies": {
+    "@eventhub/shared": "*",
     "bcryptjs": "^3.0.3",
     "better-sqlite3": "^13.0.3",
     "dotenv": "^18.0.9",
