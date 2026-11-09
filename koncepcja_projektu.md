@@ -83,7 +83,7 @@ Aplikacja zostanie przygotowana do opcjonalnego uruchomienia w kontenerach Docke
 - [x] Utworzenie struktury bazy SQLite i migracji tabel.
 - [x] Implementacja wzorca Repozytorium dla encji `Event` i `User`.
 - [x] Utworzenie endpointów CRUD dla wydarzeń.
-- [ ] Implementacja autoryzacji JWT i middleware sprawdzających role.
+- [x] Implementacja autoryzacji JWT i middleware sprawdzających role.
 - [ ] Implementacja logiki zapisu na wydarzenie z blokadą overbookingu w transakcji SQLite.
 
 ### Etap 3: Klient Frontendowy (React)

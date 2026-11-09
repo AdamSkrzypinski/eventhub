@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import { DatabaseConnection } from './config/database.js';
 import eventRoutes from './routes/event.routes.js';
+import authRoutes from './routes/auth.routes.js';
 
 
 dotenv.config();
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 5000
 
 app.use(express.json());
 
+app.use('/api/auth', authRoutes);
 app.use('/api/events', eventRoutes);
 
 app.get('/api/health', (_req: Request, res: Response) => {
