@@ -84,7 +84,7 @@ Aplikacja zostanie przygotowana do opcjonalnego uruchomienia w kontenerach Docke
 - [x] Implementacja wzorca Repozytorium dla encji `Event` i `User`.
 - [x] Utworzenie endpointów CRUD dla wydarzeń.
 - [x] Implementacja autoryzacji JWT i middleware sprawdzających role.
-- [ ] Implementacja logiki zapisu na wydarzenie z blokadą overbookingu w transakcji SQLite.
+- [x] Implementacja logiki zapisu na wydarzenie z blokadą overbookingu w transakcji SQLite.
 
 ### Etap 3: Klient Frontendowy (React)
 - [ ] Utworzenie projektu React (Vite) z Tailwind CSS.
