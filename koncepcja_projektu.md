@@ -12,6 +12,8 @@
 | **Imię i Nazwisko studenta** | [Adam Skrzypiński] |
 | **Numer indeksu** | [98210] |
 | **Kierunek / Semestr** | Informatyka / 6 |
+| **Adres GitHub projektu** | [https://github.com/AdamSkrzypinski/eventhub] |
+
 
 
 ---
